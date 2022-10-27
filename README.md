@@ -1,8 +1,7 @@
 # Neuro Wrangler
-## Neuro Wrangler (C#)
 ## What is Neuro Wrangler?
-Neuro Wrangler allows to navigate convoluted mechanics of tabletop RPG _Neuroshima_.
-## Features
+Neuro Wrangler (temporary name) allows to navigate convoluted mechanics of tabletop RPG _Neuroshima_. It is meant to be a tool which Game Masters can use to run battles with greater efficiency. _Neuroshima_ has numerous, complex mechanics and managing all of them can be a daunting task. Neuro Wrangler is designed to make it easier.  
+## Roadmap
 - [ ] Storing data about a character
 	- [ ] Stats and abilities
 	- [ ] Penalties for every ability
@@ -27,17 +26,20 @@ Neuro Wrangler allows to navigate convoluted mechanics of tabletop RPG _Neuroshi
 	- [ ] Initiative queue according to an original _Neuroshima_ concept - 3 single-segment actions will be performed faster than one triple-segment action
 	- [ ] Calculating roll disadvantage according to characters' placement on the battle map and simulating rolls
 - [ ] Modyfikatory koloru
-	- [ ] Stal
-		- [ ] Otrzymanie rany krytycznej oznacza bezwzględnie śmierć postaci
-	- [ ] Rdza
-	- [ ] Rtęć
-	- [ ] Chrom
+	- [ ] Steel
+		- [ ] Critical wound gives no chance for recovery
+	- [ ] Rust
+	- [ ] Mercury
+	- [ ] Chrome
 
 ## Class dependencies structure
 
 ```
 Creature.cs
   string name
+  int xpEarned
+  int xpExpended
+  int xpTotal
   string backgroundTrait
   string proffessionTrait
   bool alive
