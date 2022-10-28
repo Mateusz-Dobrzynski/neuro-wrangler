@@ -1,6 +1,6 @@
 # Neuro Wrangler
 ## What is Neuro Wrangler?
-Neuro Wrangler (temporary name) allows to navigate convoluted mechanics of tabletop RPG _Neuroshima_. It is meant to be a tool which Game Masters can use to run battles with greater efficiency. _Neuroshima_ has numerous, complex mechanics and managing all of them can be a daunting task. Neuro Wrangler is designed to make it easier.  
+Neuro Wrangler (temporary name) allows to navigate convoluted mechanics of tabletop RPG _Neuroshima_. It is meant to be a tool which Game Masters can use to run battles with greater efficiency. _Neuroshima_ has numerous, complex mechanics and managing all of them can be a daunting task. Neuro Wrangler is designed to make it easier.
 ## Roadmap
 - [ ] Storing data about a character
 	- [ ] Stats and abilities
@@ -34,17 +34,15 @@ Neuro Wrangler (temporary name) allows to navigate convoluted mechanics of table
 
 ## Class dependencies structure
 
-```
+```YAML
 Creature.cs
+  bool berserkerMode
   string name
-  int xpEarned
-  int xpExpended
-  int xpTotal
-  string backgroundTrait
-  string proffessionTrait
   bool alive
   int maxHealth
   int[,] coordinatesPosition
+  int agression
+  int damageReduction
   string posture
   int segmentsRemaining
   abilities
@@ -68,7 +66,12 @@ Creature.cs
   Human.cs
     string codename
     string surname
+    string background
+    string backgroundTrait
+    string proffession
+    string proffessionTrait
   Machine.cs
+    int softwareAdvancement
   Beast.cs
 
 Item.cs
@@ -78,6 +81,7 @@ Item.cs
   Armor.cs
     int tier
     int strength
+    int penalty
   Weapon.cs
     int requiredConstitution
     MeleWeapon.cs
