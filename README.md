@@ -21,7 +21,7 @@ Neuro Wrangler (temporary name) allows to navigate convoluted mechanics of table
 	- [ ] Armor of the target
 - [ ] Battle manager
 	- [ ] Interactive battle map
-		- [ ] Map is represented by a [[graph]]
+		- [ ] Map is represented by a graph
 		- [ ] Every node contains information about terrain elevation, occupation and whether it's a difficult terrain or not
 	- [ ] Initiative queue according to an original _Neuroshima_ concept - 3 single-segment actions will be performed faster than one triple-segment action
 	- [ ] Calculating roll disadvantage according to characters' placement on the battle map and simulating rolls
