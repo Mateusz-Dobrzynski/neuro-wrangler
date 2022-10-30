@@ -5,15 +5,27 @@ using System.Text;
 
 namespace WindowsFormsApp1
 {
-    public class Stat
+    public class Stat : ITrait
     {
-        int modifierPercentage;
-        int value;
-        private int modifierInt;
+        public int modifierInt { get; set; }
 
-        public bool TestStat()
+        public int modifierPercentage { get; set; }
+        public int value { get; set; }
+
+        public int OpenCheck()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
+
+        public bool Check()
+        {
+            throw new NotImplementedException();
+        }
+
+        public object Contest()
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

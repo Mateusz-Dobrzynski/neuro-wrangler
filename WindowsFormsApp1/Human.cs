@@ -12,11 +12,11 @@ namespace WindowsFormsApp1
         public string profession;
         public string professionTrait;
 
-        public bool alive { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int[,] coordinatesPostion { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Stats stats { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int maxHealth { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public bool alive { get; set; }
+        public int[,] coordinatesPostion { get; set; }
+        public string name { get; set; }
+        public Stats stats { get; set; }
+        public int maxHealth { get; set; }
 
         public void Attack()
         {

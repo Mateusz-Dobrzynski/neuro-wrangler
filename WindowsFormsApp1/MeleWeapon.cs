@@ -5,7 +5,7 @@ using System.Text;
 
 namespace WindowsFormsApp1
 {
-    public class MeleWeapon : Weapon
+    public class MeleeWeapon : Weapon
     {
         int defenseBonus;
         int offenceBonus;

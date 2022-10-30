@@ -8,16 +8,18 @@ namespace WindowsFormsApp1
     public class Weapon : Item
     {
         /// <summary>
-        /// Constitution required to use the weapon without getting lumbered with penalties
+        /// Constitution required to use the weapon
+        /// without getting lumbered with penalties
         /// </summary>
-        int requiredConst;
+        int requiredConst { get; set; }
         /// <summary>
-        /// Number of points subtracted from a target's armor damage reduction
+        /// Number of points subtracted from
+        /// a target's armor damage reduction
         /// </summary>
-        int armorPenetration;
+        int armorPenetration { get; set; }
         /// <summary>
         /// Ability tested while using the weapon
         /// </summary>
-        private string relatedAbility;
+        string relatedAbility { get; set; }
     }
 }

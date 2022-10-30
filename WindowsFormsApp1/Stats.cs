@@ -7,11 +7,11 @@ namespace WindowsFormsApp1
 {
     public class Stats
     {
-        public int charisma;
-        public int constitution;
-        public int intelligence;
-        public int perception;
-        public int dexterity;
+        int charisma { get; set; }
+        int constitution { get; set; }
+        int dexterity { get; set; }
+        int intelligence { get; set; }
+        int perception { get; set; }
 
         public Stats(int charisma, int constitution, int dexterity, int intelligence, int perception)
         {

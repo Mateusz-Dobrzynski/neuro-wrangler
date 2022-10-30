@@ -5,14 +5,30 @@ using System.Text;
 
 namespace WindowsFormsApp1
 {
-    public class Ability
+    public class Ability : ITrait
     {
-        object baseStat;
-        int modifierPercentage;
-        int value;
-        private int modifierInt;
+        /// <summary>
+        /// Stat related to given ability
+        /// </summary>
+        public Stat baseStat { get; set; }
 
-        public void TestAbility()
+        public int modifierInt { get; set; }
+
+        public int modifierPercentage { get; set; }
+
+        public int value { get; set; }
+
+        public bool Check()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public object Contest()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public int OpenCheck()
         {
             throw new System.NotImplementedException();
         }
