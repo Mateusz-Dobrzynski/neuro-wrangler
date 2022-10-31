@@ -9,6 +9,7 @@ namespace WindowsFormsApp1
     {
         bool alive { get; set; }
         int[,] coordinatesPostion { get; set; }
+        int currentHealth { get; set; }
         int maxHealth { get; set; }
         string name { get; set; }
         Stats stats { get; set; }

@@ -46,8 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abilities.cs" />
     <Compile Include="Ability.cs" />
     <Compile Include="Armor.cs" />
+    <Compile Include="CharismaBasedAbility.cs" />
+    <Compile Include="ConstitutionBasedAbility.cs" />
+    <Compile Include="DexterityBasedAbility.cs" />
     <Compile Include="DiceRoller.cs" />
     <Compile Include="DifficultyLevels.cs" />
     <Compile Include="DificulltyPercentages.cs" />
@@ -61,10 +65,13 @@
     <Compile Include="Human.cs" />
     <Compile Include="ICreature.cs" />
     <Compile Include="IItem.cs" />
+    <Compile Include="IntelligenceBasedAbility.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="ITrait.cs" />
     <Compile Include="IWeapon.cs" />
-    <Compile Include="MeleWeapon.cs" />
+    <Compile Include="MeleeWeapon.cs" />
+    <Compile Include="PerceptionBasedAbility.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stat.cs" />
     <Compile Include="Stats.cs" />
@@ -72,6 +79,9 @@
     <Compile Include="Wound.cs" />
     <Compile Include="WoundPenalties.cs" />
     <Compile Include="WoundTiers.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

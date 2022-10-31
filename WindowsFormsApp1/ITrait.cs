@@ -24,7 +24,11 @@ namespace WindowsFormsApp1
         /// </summary>
         int value { get; set; }
         /// <summary>
-        /// Trait check is used to check, whether a creature succeded or failed at a particular action. Not all actions require a trait check
+        /// Trait check is used to determine, whether a creature succeded or failed
+        /// at a particular action. To perform a check, one has to roll 3d20.
+        /// The highest roll is discarded and the other two have to be below
+        /// or equal to trait value.
+        /// Not all actions require a trait check
         /// </summary>
         bool Check();
         /// <summary>

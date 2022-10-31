@@ -20,9 +20,9 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="WindowsFormsApp1.Human">
-    <Position X="0.5" Y="3.75" Width="2" />
+    <Position X="0.5" Y="4" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAACYACAAAAiAAAAAAgAABIAEAAAAAAAAAAAAIAA=</HashCode>
+      <HashCode>AAAAAACYACAAAAiAAAAAAgAABIAEAAAAAAAAAAAAIAE=</HashCode>
       <FileName>Human.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -35,14 +35,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp1.MeleeWeapon">
-    <Position X="5" Y="4.75" Width="1.5" />
+    <Position X="5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACAAAAAAAAAAgAAAAAAQAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MeleWeapon.cs</FileName>
+      <FileName>MeleeWeapon.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp1.Wound">
-    <Position X="5" Y="3" Width="1.5" />
+    <Position X="5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAAAAgAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Wound.cs</FileName>
@@ -60,6 +60,62 @@
     <TypeIdentifier>
       <HashCode>AAAAIAAAAAAAgAAAAAAAAABAAAAAAAAQAAAAAAABAAA=</HashCode>
       <FileName>Stats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp1.Program">
+    <Position X="7" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp1.DiceRoller" Collapsed="true">
+    <Position X="5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DiceRoller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp1.Abilities">
+    <Position X="5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAECAAAAACEAAACEAAAiAAIAACAIABAAYAiIBAQAU=</HashCode>
+      <FileName>Abilities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp1.DexterityBasedAbility">
+    <Position X="9.25" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DexterityBasedAbility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp1.ConstitutionBasedAbility">
+    <Position X="11.25" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConstitutionBasedAbility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp1.IntelligenceBasedAbility">
+    <Position X="13.75" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IntelligenceBasedAbility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp1.PerceptionBasedAbility">
+    <Position X="9.25" Y="8" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PerceptionBasedAbility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp1.CharismaBasedAbility">
+    <Position X="11.5" Y="8" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CharismaBasedAbility.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="WindowsFormsApp1.ICreature">
@@ -98,10 +154,17 @@
     </TypeIdentifier>
   </Enum>
   <Enum Name="WindowsFormsApp1.WoundTiers">
-    <Position X="0.5" Y="7.75" Width="1.5" />
+    <Position X="0.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAgAAAAAEAAAAAAAAI=</HashCode>
       <FileName>WoundTiers.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="WindowsFormsApp1.WoundPenalties">
+    <Position X="2.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAgAAAAAEAAAAAAAAI=</HashCode>
+      <FileName>WoundPenalties.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

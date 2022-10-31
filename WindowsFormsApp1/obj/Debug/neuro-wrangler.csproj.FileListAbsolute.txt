@@ -1,0 +1,11 @@
+C:\Users\gryzo\Desktop\Obsidian Notes\Code\neuro-wrangler\WindowsFormsApp1\obj\Debug\neuro-wrangler.csproj.AssemblyReference.cache
+C:\Users\gryzo\Desktop\Obsidian Notes\Code\neuro-wrangler\WindowsFormsApp1\obj\Debug\neuro-wrangler.csproj.SuggestedBindingRedirects.cache
+C:\Users\gryzo\Desktop\Obsidian Notes\Code\neuro-wrangler\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\gryzo\Desktop\Obsidian Notes\Code\neuro-wrangler\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\gryzo\Desktop\Obsidian Notes\Code\neuro-wrangler\WindowsFormsApp1\obj\Debug\neuro-wrangler.csproj.GenerateResource.cache
+C:\Users\gryzo\Desktop\Obsidian Notes\Code\neuro-wrangler\WindowsFormsApp1\obj\Debug\neuro-wrangler.csproj.CoreCompileInputs.cache
+C:\Users\gryzo\Desktop\Obsidian Notes\Code\neuro-wrangler\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\gryzo\Desktop\Obsidian Notes\Code\neuro-wrangler\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\gryzo\Desktop\Obsidian Notes\Code\neuro-wrangler\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\gryzo\Desktop\Obsidian Notes\Code\neuro-wrangler\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\gryzo\Desktop\Obsidian Notes\Code\neuro-wrangler\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
