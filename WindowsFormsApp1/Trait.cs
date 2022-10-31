@@ -9,7 +9,7 @@ namespace WindowsFormsApp1
      * Trait is an interface for Stat and Ability,
      * as they both can be tested in ability or stat checks.
      */
-    public interface ITrait
+    public class Trait
     {
         /// <summary>
         /// Modifier expressed as intereger
@@ -30,14 +30,23 @@ namespace WindowsFormsApp1
         /// or equal to trait value.
         /// Not all actions require a trait check
         /// </summary>
-        bool Check();
+        bool Check()
+        {
+            throw new NotImplementedException();
+        }
         /// <summary>
         /// Contests are performed when two characters try to perform opposing actions. This method returns the winner of the contest
         /// </summary>
-        object Contest();
+        object Contest()
+        {
+            throw new NotImplementedException();
+        }
         /// <summary>
         /// Open check determines, how well a certain action was performed. Open checks are used for example during contests or when initiative order is being determined
         /// </summary>
-        int OpenCheck();
+        int OpenCheck()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

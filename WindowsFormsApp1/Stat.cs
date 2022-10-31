@@ -5,7 +5,7 @@ using System.Text;
 
 namespace WindowsFormsApp1
 {
-    public class Stat : ITrait
+    public class Stat : Trait
     {
         public int modifierInt { get; set; }
 

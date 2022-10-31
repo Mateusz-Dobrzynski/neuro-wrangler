@@ -5,7 +5,7 @@ using System.Text;
 
 namespace WindowsFormsApp1
 {
-    public class Human : ICreature
+    public class Human : Creature
     {
         public string background;
         public string backgroundTrait;

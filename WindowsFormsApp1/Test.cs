@@ -6,7 +6,7 @@ using System.Text;
 
 namespace WindowsFormsApp1
 {
-    public class Program
+    public class Test
     {
         static void Main(string[] args)
         {
