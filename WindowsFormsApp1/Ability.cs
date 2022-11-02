@@ -12,10 +12,9 @@ namespace WindowsFormsApp1
         /// </summary>
 
         public int modifierInt { get; set; } = 0;
-
         public int modifierPercentage { get; set; } = 0;
-
         public int value { get; set; } = 0;
+        public int baseStat { get; set; }
 
         /// <summary>
         /// Ability check is used to determine, whether a creature succeded or failed
@@ -23,19 +22,38 @@ namespace WindowsFormsApp1
         /// The highest roll is discarded and the other two have to be below
         /// or equal to base stat value. One can lower results of the rools by the total of ability's value
         /// </summary>
-        public bool Check()
+        public new bool Check()
+        {
+            throw new NotImplementedException();
+        }
+
+        public new object Contest()
         {
             throw new System.NotImplementedException();
         }
 
-        public object Contest()
+        public new int OpenCheck()
         {
             throw new System.NotImplementedException();
         }
 
-        public int OpenCheck()
+        /// <summary>
+        /// Allows to determine a modifier for a given ability.
+        /// </summary>
+        /// <returns>
+        /// A signle integer representing modifier for a given ability.
+        /// The bigger the modifier, the easier the ability check becomes.
+        /// Modifier can have negative values.
+        /// </returns>
+        public new int CalculateDifficulty(Stat baseStat)
         {
-            throw new System.NotImplementedException();
+            int abilityVal = this.value;
+            int abilityModInt = this.modifierInt;
+            int abilityModPercentage = this.modifierPercentage;
+            int baseStatVal = baseStat.value;
+            int baseStatModInt = baseStat.modifierInt;
+            int baseStatModPercentage = baseStat.modifierPercentage;
+            throw new NotImplementedException();
         }
     }
 }

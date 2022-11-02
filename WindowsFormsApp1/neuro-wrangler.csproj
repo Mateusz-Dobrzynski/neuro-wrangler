@@ -53,6 +53,7 @@
     <Compile Include="ConstitutionBasedAbility.cs" />
     <Compile Include="DexterityBasedAbility.cs" />
     <Compile Include="DiceRoller.cs" />
+    <Compile Include="DifficultyCalculator.cs" />
     <Compile Include="DifficultyLevels.cs" />
     <Compile Include="DificulltyPercentages.cs" />
     <Compile Include="Firearm.cs" />
@@ -77,7 +78,9 @@
     <Compile Include="Stats.cs" />
     <Compile Include="Weapon.cs" />
     <Compile Include="IWound.cs" />
+    <Compile Include="Wound.cs" />
     <Compile Include="WoundPenalties.cs" />
+    <Compile Include="Wounds.cs" />
     <Compile Include="WoundTiers.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

@@ -18,9 +18,9 @@ namespace WindowsFormsApp1
         public string name { get; set; }
         public Stats stats { get; set; }
         public int currentHealth { get; set; }
-        public int maxHealth { get; set; }
+        public int maxHealth { get; } = 27;
 
-        public Human(string background, string backgroundTrait, string profession, string professionTrait, bool alive, string name, Stats stats, Abilities abilities, int currentHealth, int maxHealth)
+        public Human(string background, string backgroundTrait, string profession, string professionTrait, bool alive, string name, Stats stats, Abilities abilities, int currentHealth)
         {
             this.background = background;
             this.backgroundTrait = backgroundTrait;
@@ -32,7 +32,6 @@ namespace WindowsFormsApp1
             this.stats = stats;
             this.abilities = abilities;
             this.currentHealth = currentHealth;
-            this.maxHealth = maxHealth;
         }
 
         public void Attack()

@@ -8,7 +8,7 @@ namespace WindowsFormsApp1
     public class DiceRoller
     {
         /// <summary>
-        /// Returns 3 ints between 1 and 20
+        /// Returns 3 integers between 1 and 20
         /// </summary>
         public List<int> Roll3d20()
         {
@@ -16,9 +16,9 @@ namespace WindowsFormsApp1
         }
 
         /// <summary>
-        /// Returns x ints between 1 and 20
+        /// Returns x integers between 1 and 20
         /// </summary>
-        public List<int> Rollxd20()
+        public List<int> Rollxd20(int x)
         {
             throw new System.NotImplementedException();
         }

@@ -12,20 +12,5 @@ namespace WindowsFormsApp1
         public int modifierPercentage { get; set; }
         public int value { get; set; }
 
-        public int OpenCheck()
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Check()
-        {
-            throw new NotImplementedException();
-        }
-
-        public object Contest()
-        {
-            throw new NotImplementedException();
-        }
-
     }
 }

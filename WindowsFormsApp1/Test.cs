@@ -12,10 +12,15 @@ namespace WindowsFormsApp1
         {
             Abilities testAbilities = new Abilities();
             testAbilities.pistols.value = 4;
-            Human test = new Human("", "", "", "", true, "Test Human", new Stats(10, 10, 10, 10, 10), testAbilities, 27, 27);
+            Human test = new Human("", "", "", "", true, "Test Human", new Stats(10, 10, 10, 10, 10), testAbilities, 27);
             int pistols = test.abilities.pistols.value;
             int bow = test.abilities.bow.value;
-            int sum = pistols + bow;
+            test.abilities.pistols.modifierPercentage += 30;
+            if (test.abilities.pistols.Check())
+            {
+                Console.WriteLine("Check passed");
+            }
+            test.abilities.pistols.modifierInt -= 2;
         }
     }
 }
