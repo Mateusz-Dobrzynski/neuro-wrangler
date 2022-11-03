@@ -21,6 +21,9 @@ namespace WindowsFormsApp1
                 Console.WriteLine("Check passed");
             }
             test.abilities.pistols.modifierInt -= 2;
+            DiceRoller diceRoller = new DiceRoller();
+            List<Int16> diceRolls = diceRoller.Roll3d20();
+            Console.WriteLine(diceRolls);
         }
     }
 }
