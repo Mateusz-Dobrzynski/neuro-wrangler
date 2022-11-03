@@ -16,10 +16,10 @@ namespace WindowsFormsApp1
             int pistols = test.abilities.pistols.value;
             int bow = test.abilities.bow.value;
             test.abilities.pistols.modifierPercentage += 30;
-            if (test.abilities.pistols.Check())
+            /*if (test.abilities.pistols.Check())
             {
                 Console.WriteLine("Check passed");
-            }
+            }*/
             test.abilities.pistols.modifierInt -= 2;
             DiceRoller diceRoller = new DiceRoller();
             List<Int16> diceRolls = diceRoller.Roll3d20();
