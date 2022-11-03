@@ -45,7 +45,7 @@ namespace WindowsFormsApp1
         /// The bigger the modifier, the easier the ability check becomes.
         /// Modifier can have negative values.
         /// </returns>
-        public new int CalculateDifficulty(Stat baseStat)
+        public int CalculateDifficulty(Stat baseStat)
         {
             int abilityVal = this.value;
             int abilityModInt = this.modifierInt;

@@ -15,9 +15,9 @@ namespace WindowsFormsApp1
         /// Constitution required to deal given damage
         /// </summary>
         int requiredConst { get; }
-        List<WoundTiers> damageTiers { get; set; }
+        List<IWound> damageTiers { get; set; }
 
-        public MeleeDamageTiers(int requiredConst, WoundTiers firstTier, WoundTiers secondTier, WoundTiers thirdTier)
+        public MeleeDamageTiers(int requiredConst, IWound firstTier, IWound secondTier, IWound thirdTier)
         {
             this.requiredConst = requiredConst;
             this.damageTiers[0] = firstTier;
