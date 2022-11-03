@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
             for(int i = 0; i < 3; i++)
             {
                 Random randNum = new Random();
-                int x = randNum.Next(1, 21);
+                short x = Convert.ToInt16(randNum.Next(1, 21));
                 diceRolls.Add(x);
             }
             return diceRolls;
