@@ -29,9 +29,8 @@ namespace WindowsFormsApp1
         /// It reduces current health and checks whether the creature is still alive
         /// Then, it performs Pain Resistance check and adds penalty accordingly
         /// </summary>
-        void Damage(WoundTiers woundTier, string location)
+        void Damage(IWound wound, string location)
         {
-
         }
 
         /// <summary>

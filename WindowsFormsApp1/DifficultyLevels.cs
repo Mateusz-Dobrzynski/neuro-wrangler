@@ -17,14 +17,13 @@ namespace WindowsFormsApp1
      * Firstly, the total modifier percentage is summed.
      * Secondly, it is converted to a specific difficulty
      * level based upon its value.
-     * 
      */
     public enum DifficultyLevels
     {
         /// <summary>
         /// Below 0%
         /// </summary>
-        Easy = +2,
+        Easy = 2,
         /// <summary>
         /// Up to 10%
         /// </summary>

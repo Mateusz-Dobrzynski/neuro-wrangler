@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Comment CommentText="Some modifiers are expressed as integers, some as percentages. Therefore abilities and stats require two modifier fields">
-    <Position X="8.885" Y="3.041" Height="1.24" Width="1.7" />
+    <Position X="9.065" Y="4.287" Height="1.24" Width="1.7" />
   </Comment>
   <Comment CommentText="Every wound tier needs its own class derived form Wound interface.">
     <Position X="0.597" Y="9.864" Height="0.915" Width="3.381" />
   </Comment>
   <Class Name="WindowsFormsApp1.Ability">
-    <Position X="10.75" Y="3.25" Width="1.75" />
+    <Position X="11" Y="3.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAEABgAAgAEAAAAAAQAAAAAAAAAACAAAAAAAAACAAA=</HashCode>
       <FileName>Ability.cs</FileName>
@@ -37,7 +37,7 @@
   <Class Name="WindowsFormsApp1.MeleeWeapon">
     <Position X="5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ACAAAAAAAAAAgAAAAAAQAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAgAAAAAAQAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MeleeWeapon.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -70,35 +70,35 @@
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp1.DexterityBasedAbility">
-    <Position X="9.25" Y="6.25" Width="1.75" />
+    <Position X="9.25" Y="7" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DexterityBasedAbility.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp1.ConstitutionBasedAbility">
-    <Position X="11.25" Y="6.25" Width="2" />
+    <Position X="11.25" Y="7" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ConstitutionBasedAbility.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp1.IntelligenceBasedAbility">
-    <Position X="13.75" Y="6.25" Width="2" />
+    <Position X="13.75" Y="7" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IntelligenceBasedAbility.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp1.PerceptionBasedAbility">
-    <Position X="9.25" Y="8" Width="2" />
+    <Position X="9.25" Y="8.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PerceptionBasedAbility.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp1.CharismaBasedAbility">
-    <Position X="11.5" Y="8" Width="1.75" />
+    <Position X="11.5" Y="8.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CharismaBasedAbility.cs</FileName>
@@ -118,11 +118,42 @@
       <FileName>Creature.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WindowsFormsApp1.Wound">
-    <Position X="4.75" Y="10" Width="1.5" />
+  <Class Name="WindowsFormsApp1.MeleeDamageTiers">
+    <Position X="2.75" Y="8.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAgAAAAAAAAAAAAAACAgAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Wound.cs</FileName>
+      <HashCode>AAAAAAAIAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MeleeDamageTiers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp1.Graze">
+    <Position X="3" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAwAAAAAAAAAAAAAACAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Graze.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowsFormsApp1.LightWound">
+    <Position X="4.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAwAAAAAAAAAAAAAACAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>LightWound.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowsFormsApp1.SeriousWound">
+    <Position X="6.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAwAAAAAAAAAAAAAACAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>SeriousWound.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="WindowsFormsApp1.CriticalWound">
+    <Position X="8.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAwAAAAAAAAAAAAAACAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>CriticalWound.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -140,39 +171,11 @@
       <FileName>IWeapon.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="WindowsFormsApp1.IWound">
-    <Position X="6.75" Y="9.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAgAAAAAAAAAAAAAACAgAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>IWound.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Enum Name="WindowsFormsApp1.DifficultyLevels">
     <Position X="6.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAECgAAAAAAABAAAAAAAAIAAAAAAABAAAgAAA=</HashCode>
       <FileName>DifficultyLevels.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Enum Name="WindowsFormsApp1.WoundTiers">
-    <Position X="0.5" Y="11" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAgAAAAAEAAAAAAAAI=</HashCode>
-      <FileName>WoundTiers.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Enum Name="WindowsFormsApp1.WoundPenalties">
-    <Position X="2.5" Y="11" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAgAAAAAEAAAAAAAAI=</HashCode>
-      <FileName>WoundPenalties.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
-  <Enum Name="WindowsFormsApp1.Wounds">
-    <Position X="4.75" Y="11.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Wounds.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />
