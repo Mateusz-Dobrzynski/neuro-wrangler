@@ -13,9 +13,16 @@ namespace WindowsFormsApp1
         /// <returns>
         /// List containing 3 random integers between 1 and 20 representing 3d20 roll
         /// </returns>
-        public List<int> Roll3d20()
+        public List<Int16> Roll3d20()
         {
-            throw new System.NotImplementedException();
+            List<Int16> diceRolls = new List<Int16>(3);
+            for(int i = 0; i < 3; i++)
+            {
+                Random randNum = new Random();
+                int x = randNum.Next(1, 21);
+                diceRolls.Add(x);
+            }
+            return diceRolls;
         }
 
         /// <summary>
