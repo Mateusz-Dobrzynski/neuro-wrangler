@@ -16,9 +16,9 @@ namespace WindowsFormsApp1
         public List<Int16> Roll3d20()
         {
             List<Int16> diceRolls = new List<Int16>(3);
-            for(int i = 0; i < 3; i++)
+            Random randNum = new Random();
+            for (int i = 0; i < 3; i++)
             {
-                Random randNum = new Random();
                 short x = Convert.ToInt16(randNum.Next(1, 21));
                 diceRolls.Add(x);
             }
