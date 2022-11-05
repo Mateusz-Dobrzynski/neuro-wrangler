@@ -31,9 +31,16 @@ namespace WindowsFormsApp1
         /// <returns>
         /// List of x random integers between 1 and 20
         /// </returns>
-        public List<int> Rollxd20(int x)
+        public List<Int16> Rollxd20(int x)
         {
-            throw new System.NotImplementedException();
+            List<Int16> diceRolls = new List<Int16>(x);
+            Random randNum = new Random();
+            for (int i = 0; i < x; i++)
+            {
+                short y = Convert.ToInt16(randNum.Next(1, 21));
+                diceRolls.Add(y);
+            }
+            return diceRolls;
         }
     }
 }
