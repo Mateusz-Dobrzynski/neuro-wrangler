@@ -23,7 +23,8 @@ namespace WindowsFormsApp1
             test.abilities.pistols.modifierInt -= 2;
             DiceRoller diceRoller = new DiceRoller();
             List<Int16> diceRolls = diceRoller.Roll3d20();
-            Console.WriteLine(diceRolls);
+            Ability ability = new Ability(0, 30, 15);
+            bool abilityCheck = ability.Check(diceRolls);
         }
     }
 }

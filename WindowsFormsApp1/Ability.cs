@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
         public int modifierInt { get; set; } = 0;
         public int modifierPercentage { get; set; } = 0;
         public int value { get; set; } = 0;
-        public int baseStat { get; set; }
+        ///public int baseStat { get; set; }
 
         /// <summary>
         /// Ability check is used to determine, whether a creature succeded or failed
@@ -22,9 +22,73 @@ namespace WindowsFormsApp1
         /// The highest roll is discarded and the other two have to be below
         /// or equal to base stat value. One can lower results of the rools by the total of ability's value
         /// </summary>
-        public new bool Check()
+        /// 
+        public Ability(int modifierInt, int modifierPercentage, int value)
         {
-            throw new NotImplementedException();
+            this.modifierInt = modifierInt;
+            this.modifierPercentage = modifierPercentage;
+            this.value = value;
+        }
+        public new bool Check(List<Int16> diceRolls)
+        {
+            int modifierInt = this.modifierInt;
+            int modifierPercentage = this.modifierPercentage;
+            int value = this.value;
+            int passCount = 0;
+            bool passed;
+            ///pora na spaghetti code!
+            if(modifierPercentage <= 0)
+            {
+                int diffMod = (int)DifficultyLevels.Easy;
+                modifierInt += diffMod;
+            }
+            else if(modifierPercentage > 0 && modifierPercentage <= 10)
+            {
+                int diffMod = (int)DifficultyLevels.Normal;
+                modifierInt += diffMod;
+            }
+            else if (modifierPercentage > 10 && modifierPercentage <= 30)
+            {
+                int diffMod = (int)DifficultyLevels.Problematic;
+                modifierInt += diffMod;
+            }
+            else if (modifierPercentage > 30 && modifierPercentage <= 60)
+            {
+                int diffMod = (int)DifficultyLevels.Hard;
+                modifierInt += diffMod;
+            }
+            else if (modifierPercentage > 60 && modifierPercentage <= 90)
+            {
+                int diffMod = (int)DifficultyLevels.VeryHard;
+                modifierInt += diffMod;
+            }
+            else if (modifierPercentage > 90 && modifierPercentage <= 120)
+            {
+                int diffMod = (int)DifficultyLevels.DamnHard;
+                modifierInt += diffMod;
+            }
+            else
+            {
+                int diffMod = (int)DifficultyLevels.LuckyHard;
+                modifierInt += diffMod;
+            }
+            value += modifierInt;
+            diceRolls.Sort();
+            diceRolls.RemoveAt(2);
+            foreach(Int16 x in diceRolls)
+            {
+                if(x <= value)
+                {
+                    passCount++;
+                }
+            }
+            if(passCount == 2)
+            {
+                passed = true;
+            }
+            else { passed = false; }
+
+            return passed;
         }
 
         public new object Contest()
