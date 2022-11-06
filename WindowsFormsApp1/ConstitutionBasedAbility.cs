@@ -7,6 +7,6 @@ namespace WindowsFormsApp1
 {
     public class ConstitutionBasedAbility : Ability
     {
-        public new string baseStat { get; } = "Constitution";
+        public string baseStat { get; } = "Constitution";
     }
 }

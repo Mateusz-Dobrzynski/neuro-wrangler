@@ -1,25 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Comment CommentText="Some modifiers are expressed as integers, some as percentages. Therefore abilities and stats require two modifier fields">
-    <Position X="9.065" Y="4.287" Height="1.24" Width="1.7" />
+    <Position X="7.083" Y="2.031" Height="1.24" Width="1.7" />
   </Comment>
   <Comment CommentText="IItem and IWeapon interfaces are redundant and must be deleted">
     <Position X="8.183" Y="10.497" Height="1.494" Width="1.521" />
   </Comment>
-  <Comment CommentText="Trait class is redundant. Ability can be a derived class of Stat">
-    <Position X="10.8" Y="1.736" Height="0.75" Width="1.7" />
-  </Comment>
   <Class Name="WindowsFormsApp1.Ability">
-    <Position X="11" Y="3.5" Width="1.75" />
+    <Position X="9" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAEABgAAgAEAAAAAAQAAAAAAAAAACAAAAAAAAACAAA=</HashCode>
+      <HashCode>AAAAABgAAgAEAAAAAAQAAAAAAAAAACAAAAAAAAACAAA=</HashCode>
       <FileName>Ability.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp1.Stat">
-    <Position X="7" Y="3.25" Width="1.75" />
+    <Position X="11.5" Y="0.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAABAAAAAEAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAABgAAgAEAAAAAAQAAAAAAAAAACAAAAAAAAACAAA=</HashCode>
       <FileName>Stat.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -79,45 +76,38 @@
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp1.DexterityBasedAbility">
-    <Position X="9.25" Y="7" Width="1.75" />
+    <Position X="7.25" Y="4" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DexterityBasedAbility.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp1.ConstitutionBasedAbility">
-    <Position X="11.25" Y="7" Width="2" />
+    <Position X="9.25" Y="4" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ConstitutionBasedAbility.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp1.IntelligenceBasedAbility">
-    <Position X="13.75" Y="7" Width="2" />
+    <Position X="11.75" Y="4" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IntelligenceBasedAbility.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp1.PerceptionBasedAbility">
-    <Position X="9.25" Y="8.75" Width="2" />
+    <Position X="7.25" Y="5.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PerceptionBasedAbility.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp1.CharismaBasedAbility">
-    <Position X="11.5" Y="8.75" Width="1.75" />
+    <Position X="9.5" Y="5.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CharismaBasedAbility.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="WindowsFormsApp1.Trait">
-    <Position X="8.75" Y="0.5" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAABgAAgAEAAAAAAQAAAAAAAAAACAAAAAAAAACAAA=</HashCode>
-      <FileName>Trait.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WindowsFormsApp1.Creature">

@@ -7,6 +7,6 @@ namespace WindowsFormsApp1
 {
     public class CharismaBasedAbility : Ability
     {
-        public new string baseStat { get; } = "Charisma";
+        public string baseStat { get; } = "Charisma";
     }
 }

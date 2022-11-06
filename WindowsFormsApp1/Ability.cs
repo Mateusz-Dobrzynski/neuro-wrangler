@@ -5,16 +5,15 @@ using System.Text;
 
 namespace WindowsFormsApp1
 {
-    public class Ability : Trait
+    public class Ability : Stat
     {
         /// <summary>
         /// Stat related to given ability
         /// </summary>
 
-        public int modifierInt { get; set; } = 0;
-        public int modifierPercentage { get; set; } = 0;
-        public int value { get; set; } = 0;
-        ///public int baseStat { get; set; }
+        public new int modifierInt { get; set; } = 0;
+        public new int modifierPercentage { get; set; } = 0;
+        public new int value { get; set; } = 0;
 
         /// <summary>
         /// Ability check is used to determine, whether a creature succeded or failed
@@ -22,73 +21,49 @@ namespace WindowsFormsApp1
         /// The highest roll is discarded and the other two have to be below
         /// or equal to base stat value. One can lower results of the rools by the total of ability's value
         /// </summary>
-        /// 
-        public Ability(int modifierInt, int modifierPercentage, int value)
-        {
-            this.modifierInt = modifierInt;
-            this.modifierPercentage = modifierPercentage;
-            this.value = value;
-        }
-        public new bool Check(List<Int16> diceRolls)
+        /// <remarks>
+        /// TO-DO: If ability value equals 0, difficulty level should increase by one tier
+        /// <br></br>
+        /// To research: Can the method somehow get the base stat value without taking an argument?
+        /// </remarks>
+        /// <returns>
+        /// A boolean value representing either passed (true) or failed (false) ability check
+        /// </returns>
+        public bool Check(Stat baseStat)
         {
             int modifierInt = this.modifierInt;
             int modifierPercentage = this.modifierPercentage;
-            int value = this.value;
+            int abilityValue = this.value;
             int passCount = 0;
-            bool passed;
-            ///pora na spaghetti code!
-            if(modifierPercentage <= 0)
-            {
-                int diffMod = (int)DifficultyLevels.Easy;
-                modifierInt += diffMod;
-            }
-            else if(modifierPercentage > 0 && modifierPercentage <= 10)
-            {
-                int diffMod = (int)DifficultyLevels.Normal;
-                modifierInt += diffMod;
-            }
-            else if (modifierPercentage > 10 && modifierPercentage <= 30)
-            {
-                int diffMod = (int)DifficultyLevels.Problematic;
-                modifierInt += diffMod;
-            }
-            else if (modifierPercentage > 30 && modifierPercentage <= 60)
-            {
-                int diffMod = (int)DifficultyLevels.Hard;
-                modifierInt += diffMod;
-            }
-            else if (modifierPercentage > 60 && modifierPercentage <= 90)
-            {
-                int diffMod = (int)DifficultyLevels.VeryHard;
-                modifierInt += diffMod;
-            }
-            else if (modifierPercentage > 90 && modifierPercentage <= 120)
-            {
-                int diffMod = (int)DifficultyLevels.DamnHard;
-                modifierInt += diffMod;
-            }
-            else
-            {
-                int diffMod = (int)DifficultyLevels.LuckyHard;
-                modifierInt += diffMod;
-            }
-            value += modifierInt;
+            int upperRollValue = baseStat.value;
+            //modifierPercentage is converted into an int and added to modifierInt
+            DifficultyCalculator difficultyCalculator = new DifficultyCalculator();
+            modifierInt += difficultyCalculator.ModifierPercentageConversion(modifierPercentage);
+            upperRollValue += modifierInt;
+            //3d20 roll is performed
+            DiceRoller diceRoller = new DiceRoller();
+            List < Int16 > diceRolls = diceRoller.Roll3d20();
             diceRolls.Sort();
+            //The highest roll is discarded
             diceRolls.RemoveAt(2);
-            foreach(Int16 x in diceRolls)
+            //The other two rolls have to be lower or equal to upper roll value
+            for (int i = 0; i < 2; i++)
             {
-                if(x <= value)
+                int currentRoll = diceRolls[i];
+                if (currentRoll <= upperRollValue) passCount++;
+                else if (abilityValue > 0)
                 {
-                    passCount++;
+                    int missingPoints = abilityValue - upperRollValue;
+                    //Reducing the rollCurrent by abilityValue to pass the test
+                    if (missingPoints <= abilityValue)
+                    {
+                        passCount++;
+                        abilityValue -= missingPoints;
+                    }
                 }
             }
-            if(passCount == 2)
-            {
-                passed = true;
-            }
-            else { passed = false; }
-
-            return passed;
+            if (passCount == 2) return true;
+            else return false;
         }
 
         public new object Contest()

@@ -7,6 +7,6 @@ namespace WindowsFormsApp1
 {
     public class DexterityBasedAbility : Ability
     {
-        public new string baseStat { get; } = "Dexterity";
+        public string baseStat { get; } = "Dexterity";
     }
 }

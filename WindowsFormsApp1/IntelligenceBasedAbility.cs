@@ -7,6 +7,6 @@ namespace WindowsFormsApp1
 {
     public class IntelligenceBasedAbility : Ability
     {
-        public new string baseStat { get; } = "Intelligence";
+        public string baseStat { get; } = "Intelligence";
     }
 }
