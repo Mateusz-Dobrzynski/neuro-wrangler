@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
         /// <returns>
         /// A boolean value representing either passed (true) or failed (false) ability check
         /// </returns>
-        public bool Check(Stat baseStat)
+        public bool Check(Stat baseStat, DifficultyLevels difficulty)
         {
             int modifierInt = this.modifierInt;
             int modifierPercentage = this.modifierPercentage;
@@ -44,6 +44,20 @@ namespace WindowsFormsApp1
             DiceRoller diceRoller = new DiceRoller();
             List < Int16 > diceRolls = diceRoller.Roll3d20();
             diceRolls.Sort();
+            //For every roll equal to 1, difficulty is decreased
+            //For every roll equal to 20, difficulty is increased
+            for (int i = 0; i < 3; i++)
+            {
+                if (diceRolls[i] == 1)
+                {
+                    difficulty = difficultyCalculator.Slider(difficulty, -1);
+                }
+                else if (diceRolls[i] == 20)
+                {
+                    difficulty = difficultyCalculator.Slider(difficulty, 1);
+                }
+            }
+            upperRollValue += (int)difficulty;
             //The highest roll is discarded
             diceRolls.RemoveAt(2);
             //The other two rolls have to be lower or equal to upper roll value
