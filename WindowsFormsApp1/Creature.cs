@@ -5,13 +5,13 @@ using System.Text;
 
 namespace WindowsFormsApp1
 {
-    public class Creature
+    public class Creature : INeuroObject
     {
         bool alive { get; set; }
         int[,] coordinatesPostion { get; set; }
         int currentHealth { get; set; }
         int maxHealth { get; set; }
-        string name { get; set; }
+        public string name { get; set; }
         Stats stats { get; set; }
         List<IWound> wounds { get; set; }
 

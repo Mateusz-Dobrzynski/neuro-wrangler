@@ -15,7 +15,6 @@ namespace WindowsFormsApp1
         public Abilities abilities;
         public bool alive { get; set; }
         public int[,] coordinatesPostion { get; set; }
-        public string name { get; set; }
         public Stats stats { get; set; }
         public int currentHealth { get; set; }
         public int maxHealth { get; } = 27;

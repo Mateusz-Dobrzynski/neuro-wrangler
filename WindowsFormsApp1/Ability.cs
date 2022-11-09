@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
         /// <returns>
         /// A boolean value representing either passed (true) or failed (false) ability check
         /// </returns>
-        public bool Check(Stat baseStat, DifficultyLevels difficulty)
+        public bool Check(Stat baseStat, DifficultyLevels difficulty = DifficultyLevels.Normal)
         {
             int modifierInt = this.modifierInt;
             int modifierPercentage = this.modifierPercentage;

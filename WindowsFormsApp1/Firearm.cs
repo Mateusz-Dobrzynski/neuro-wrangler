@@ -27,9 +27,14 @@ namespace WindowsFormsApp1
         /// If true, firearm has to be reloaded after every shot
         /// </summary>
         private bool repeating;
-        /// <summary>
-        /// How many points of armor damage reduction will be subtracted
+       /// <summary>
+        /// If true, burst shooting is possible with this weapon.
         /// </summary>
-        private int armorPenetration;
+        public bool burstShooting;
+        /// <summary>
+        /// Defines a multiplier used to determine how many bullets will be shot
+        /// during brust shooting.
+        /// </summary>
+        public int fireRate = 0;
     }
 }
