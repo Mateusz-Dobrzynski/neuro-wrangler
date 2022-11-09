@@ -18,6 +18,8 @@ namespace WindowsFormsApp1
             test.abilities.pistols.modifierPercentage += 30;
             test.abilities.pistols.modifierInt -= 2;
             bool pistolsCheck = test.abilities.pistols.Check(test.stats.dexterity);
+            SerializerTest serializerTest = new SerializerTest();
+            serializerTest.TestSerializer();
         }
     }
 }

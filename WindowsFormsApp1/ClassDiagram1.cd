@@ -36,7 +36,7 @@
   <Class Name="WindowsFormsApp1.Firearm">
     <Position X="12.25" Y="15.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAgAAACAAAAMAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAIAgAAACAAAAMAAAAAAAAIAAAAAAAAAAAA=</HashCode>
       <FileName>Firearm.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -116,6 +116,7 @@
       <HashCode>AAAAQACYAAAAAACAAAAAAgAABIAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Creature.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="WindowsFormsApp1.MeleeDamageTiers">
     <Position X="7.25" Y="15.5" Width="2" />
@@ -169,26 +170,27 @@
       <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAEAAAAAEAAAAAAAAA=</HashCode>
       <FileName>Item.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="WindowsFormsApp1.IItem">
-    <Position X="10" Y="10.5" Width="1.5" />
+  <Class Name="WindowsFormsApp1.Serializer">
+    <Position X="14.25" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAEAAAAAEAAAAAAAAA=</HashCode>
-      <FileName>IItem.cs</FileName>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Serializer.cs</FileName>
     </TypeIdentifier>
-  </Interface>
-  <Interface Name="WindowsFormsApp1.IWeapon">
-    <Position X="8.75" Y="13" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAACIAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>IWeapon.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
+  </Class>
   <Interface Name="WindowsFormsApp1.IWound">
     <Position X="3" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAwAAAAAAAAAAAAAACAAAAAAAAAAAAAAABAAA=</HashCode>
       <FileName>IWound.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WindowsFormsApp1.INeuroObject">
+    <Position X="3" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>INeuroObject.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="WindowsFormsApp1.DifficultyLevels">

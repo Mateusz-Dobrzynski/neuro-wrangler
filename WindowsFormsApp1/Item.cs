@@ -5,19 +5,16 @@ using System.Text;
 
 namespace WindowsFormsApp1
 {
-    public class Item
+    public class Item : INeuroObject
     {
+        public string name { get; set; }
         /// <summary>
-        /// Item name
+        /// Type of item used to determine prices in different regions (e.g. Drugs, Weapons, Food)
         /// </summary>
-        string name;
-        /// <summary>
-        /// Type of item regarding gambling
-        /// </summary>
-        string gamblingType;
+        public string gamblingType { get; set; }
         /// <summary>
         /// Bool regarding whether an item can be thrown
         /// </summary>
-        private bool throwable;
+        public bool throwable { get; set; }
     }
 }

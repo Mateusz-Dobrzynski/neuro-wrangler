@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         /// Number of points subtracted from
         /// a target's armor damage reduction
         /// </summary>
-        int armorPenetration { get; set; }
+        public int armorPenetration { get; set; }
         /// <summary>
         /// Ability tested while using the weapon
         /// </summary>
