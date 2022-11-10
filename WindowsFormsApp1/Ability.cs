@@ -67,7 +67,7 @@ namespace WindowsFormsApp1
                 if (currentRoll <= upperRollValue) passCount++;
                 else if (abilityValue > 0)
                 {
-                    int missingPoints = abilityValue - upperRollValue;
+                    int missingPoints = currentRoll - upperRollValue; 
                     //Reducing the rollCurrent by abilityValue to pass the test
                     if (missingPoints <= abilityValue)
                     {
@@ -85,9 +85,30 @@ namespace WindowsFormsApp1
             throw new System.NotImplementedException();
         }
 
-        public new int OpenCheck()
+        public int OpenCheck(Stat baseStat, int additionalDifficulty = 0)
         {
-            throw new System.NotImplementedException();
+            int modifierInt = this.modifierInt;
+            int modifierPercentage = this.modifierPercentage;
+            int abilityValue = this.value;
+            int upperRollValue = baseStat.value;
+            //modifierPercentage is converted into an int and added to modifierInt
+            DifficultyCalculator difficultyCalculator = new DifficultyCalculator();
+            modifierInt += difficultyCalculator.ModifierPercentageConversion(modifierPercentage);
+            modifierInt += additionalDifficulty;
+            upperRollValue += modifierInt;
+            //3d20 roll is performed
+            DiceRoller diceRoller = new DiceRoller();
+            List<Int16> diceRolls = diceRoller.Roll3d20();
+            diceRolls.Sort();
+            //The highest and lowest roll is discarded
+            diceRolls.RemoveAt(2);
+            diceRolls.RemoveAt(0);
+            int currentRoll = diceRolls[0];
+            int advantagePoints;
+            if (currentRoll - abilityValue <= upperRollValue) { advantagePoints = upperRollValue - currentRoll - abilityValue; }
+            else { advantagePoints = upperRollValue - currentRoll - abilityValue; }
+            return advantagePoints;
+
         }
 
         /// <summary>
