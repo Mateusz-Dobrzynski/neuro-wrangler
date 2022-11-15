@@ -24,12 +24,15 @@
     <Position X="0.5" Y="4.25" Width="2" />
     <InheritanceLine Type="WindowsFormsApp1.Creature" FixedToPoint="true">
       <Path>
-        <Point X="1.75" Y="3.844" />
+        <Point X="1" Y="2.5" />
+        <Point X="0.969" Y="2.5" />
+        <Point X="0.969" Y="4.219" />
+        <Point X="1.75" Y="4.219" />
         <Point X="1.75" Y="4.25" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAACYACAAAAiAAAAAAgAABIAEAAAAAAAAAAAAIAE=</HashCode>
+      <HashCode>AAAAAACYACAAAAiAAAAAAgAABIAEAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Human.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -113,7 +116,7 @@
   <Class Name="WindowsFormsApp1.Creature">
     <Position X="1" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAQACYAAAAAACAAAAAAgAABIAEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAQACYAAAAAACAAAAAAgAABIAEAAAAAAAAAAAAAAE=</HashCode>
       <FileName>Creature.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />

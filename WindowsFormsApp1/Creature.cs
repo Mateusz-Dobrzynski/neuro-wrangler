@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 namespace WindowsFormsApp1
@@ -13,6 +14,7 @@ namespace WindowsFormsApp1
         int maxHealth { get; set; }
         public string name { get; set; }
         Stats stats { get; set; }
+        public Abilities abilities;
         List<IWound> wounds { get; set; }
 
         void Attack()

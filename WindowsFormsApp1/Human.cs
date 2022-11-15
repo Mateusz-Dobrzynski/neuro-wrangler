@@ -12,7 +12,6 @@ namespace WindowsFormsApp1
         public string profession;
         public string professionTrait;
 
-        public Abilities abilities;
         public bool alive { get; set; }
         public int[,] coordinatesPostion { get; set; }
         public Stats stats { get; set; }

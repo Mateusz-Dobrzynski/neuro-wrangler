@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 
 namespace WindowsFormsApp1
@@ -80,9 +81,15 @@ namespace WindowsFormsApp1
             else return false;
         }
 
-        public new object Contest()
+        public new bool Contest(Ability ability, Stat baseStat, Ability opponentAbility, Stat opponentBaseStat)
         {
-            throw new System.NotImplementedException();
+            while (true)
+            {
+                int advantagePoints = this.OpenCheck(baseStat);
+                int opponentPoints = opponentAbility.OpenCheck(opponentBaseStat);
+                if (advantagePoints > opponentPoints) return true;
+                else if (opponentPoints > advantagePoints) return false;
+            }
         }
 
         public int OpenCheck(Stat baseStat, int additionalDifficulty = 0)
