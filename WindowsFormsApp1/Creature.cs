@@ -8,7 +8,7 @@ namespace WindowsFormsApp1
 {
     public class Creature : INeuroObject
     {
-        bool alive { get; set; }
+        bool alive { get; set; } = true;
         int[,] coordinatesPostion { get; set; }
         int currentHealth { get; set; }
         int maxHealth { get; set; }
@@ -31,8 +31,17 @@ namespace WindowsFormsApp1
         /// It reduces current health and checks whether the creature is still alive
         /// Then, it performs Pain Resistance check and adds penalty accordingly
         /// </summary>
-        void Damage(IWound wound, string location)
+        void Damage(IWound wound, Weapon weapon)
         {
+            //TO-DO: Damage reduction
+            this.wounds.Add(wound);
+            this.stats.ApplyModifierPercentage(wound.penalty);
+            this.currentHealth -= wound.damagePoints;
+            if (this.currentHealth < 0)
+            {
+                this.alive = false;
+                this.currentHealth = 0;
+            }
         }
 
         /// <summary>
@@ -42,7 +51,7 @@ namespace WindowsFormsApp1
         /// If a penalty associated with wound gets reduced to 0, character's currentHealth is increased
         /// by the value equal to wound's tier
         /// </summary>
-        void Heal(int healingPercentage)
+        public void Heal(int healingPercentage)
         {
 
         }

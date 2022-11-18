@@ -79,5 +79,27 @@ namespace WindowsFormsApp1
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// This method allows to modify stat's modifierInt
+        /// </summary>
+        /// <param name="modifier">
+        /// Modifier to be applied.
+        /// </param>
+        public void ApplyModifierInt(int modifier)
+        {
+            this.modifierInt += modifier;
+        }
+
+        /// <summary>
+        /// This method allows to modify stat's modifierPercentage
+        /// </summary>
+        /// <param name="modifier">
+        /// Modifier to be applied.
+        /// </param>
+        public void ApplyModifierPercentage (int modifier)
+        {
+            this.modifierPercentage += modifier;
+        }
     }
 }

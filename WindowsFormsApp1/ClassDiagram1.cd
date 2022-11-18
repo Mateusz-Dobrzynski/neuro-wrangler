@@ -16,7 +16,7 @@
   <Class Name="WindowsFormsApp1.Stat">
     <Position X="11.5" Y="0.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAABgAAgAEAAAAAAQAAAAAAAAAACAAAAAAAAACAAA=</HashCode>
+      <HashCode>AAAAABgAAgAEAAAAAAQAAAAAAgAAAKAAAAAAAAACAAA=</HashCode>
       <FileName>Stat.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -60,7 +60,7 @@
   <Class Name="WindowsFormsApp1.Stats">
     <Position X="5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAIAAAAAAAgAAAAAAAAABAAAAAAAAQAAAAAAABAAA=</HashCode>
+      <HashCode>AAAAIAAAAAAAgAAAAAAAAABAAgAAAIAQAAAAAAABAAA=</HashCode>
       <FileName>Stats.cs</FileName>
     </TypeIdentifier>
   </Class>

@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json.Bson;
+using System;
 using System.Collections.Generic;
+using System.Drawing.Imaging;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Windows.Forms.VisualStyles;
 
@@ -26,6 +29,24 @@ namespace WindowsFormsApp1
             this.intelligence.value = intelligence;
             this.perception = new Stat();
             this.perception.value = perception;
+        }
+
+        public void ApplyModifierInt(int modifier)
+        {
+            this.charisma.ApplyModifierInt(modifier);
+            this.constitution.ApplyModifierInt(modifier);
+            this.dexterity.ApplyModifierInt(modifier);
+            this.intelligence.ApplyModifierInt(modifier);
+            this.perception.ApplyModifierInt(modifier);
+        }
+
+        public void ApplyModifierPercentage(int modifier)
+        {
+            this.charisma.ApplyModifierPercentage(modifier);
+            this.constitution.ApplyModifierPercentage(modifier);
+            this.dexterity.ApplyModifierPercentage(modifier);
+            this.intelligence.ApplyModifierPercentage(modifier);
+            this.perception.ApplyModifierPercentage(modifier);
         }
     }
 }
