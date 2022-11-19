@@ -21,6 +21,15 @@ namespace WindowsFormsApp1
             int openPistolsCheck = test.abilities.pistols.OpenCheck(test.stats.dexterity);
             AbilityTest abilityTest = new AbilityTest();
             abilityTest.TestAbility();
+
+            Graze graze = new Graze();
+            LightWound l = new LightWound();
+            SeriousWound s = new SeriousWound();
+            test.Damage(graze, new Weapon());
+            test.Damage(s, new Weapon());
+            test.Damage(l, new Weapon());
+            test.Heal(45);
+
            SerializerTest serializerTest = new SerializerTest();
            serializerTest.TestSerializer();
         }

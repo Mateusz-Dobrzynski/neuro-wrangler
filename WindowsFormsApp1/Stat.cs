@@ -26,18 +26,42 @@ namespace WindowsFormsApp1
         /// or equal to trait value.
         /// Not all actions require a trait check.
         /// </summary>
-        public bool Check()
+        /// <param name="difficulty">
+        /// Parameter representing difficulty of a check. Is set to normal by default.
+        /// </param>
+        /// <returns>
+        /// A boolean value representing whether a creature passed a check or not.
+        /// </returns>
+        public bool Check(DifficultyLevels difficulty = DifficultyLevels.Normal)
         {
+            //Fields' values are assigned to temporary variables, as they will be modified by this method
             int upperRollValue = this.value;
             int modifierInt = this.modifierInt;
             int modifierPercentage = this.modifierPercentage;
             int passCount = 0;
             DifficultyCalculator difficultyCalculator = new DifficultyCalculator();
             modifierInt += difficultyCalculator.ModifierPercentageConversion(modifierPercentage);
+            //Dice rolls are made
             DiceRoller diceRoller = new DiceRoller();
             List < Int16 > diceRolls = diceRoller.Roll3d20();
-            diceRolls.Sort();
+            //For every roll that equals 1, difficulty is reduced by 1
+            //For every roll that equals 20, difficulty is increased by 1
+            foreach (int roll in diceRolls) {
+                switch (roll)
+                {
+                    case 1:
+                        difficulty = difficultyCalculator.Slider(difficulty, -1);
+                        break;
+                    case 20:
+                        difficulty = difficultyCalculator.Slider(difficulty, 1);
+                        break;
+                }
+            }
+            //Final upper roll value is calculated
+            modifierInt += (int) difficulty;
+            upperRollValue += modifierInt;
             //The highest roll is discarded
+            diceRolls.Sort();
             diceRolls.RemoveAt(2);
             //The other two rolls have to be lower or equal to upper roll value
             for (int i = 0; i < 2; i++)

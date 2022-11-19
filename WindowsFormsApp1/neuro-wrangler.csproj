@@ -56,6 +56,7 @@
     <Compile Include="Armor.cs" />
     <Compile Include="CharismaBasedAbility.cs" />
     <Compile Include="ConstitutionBasedAbility.cs" />
+    <Compile Include="CreatureTest.cs" />
     <Compile Include="CriticalWound.cs" />
     <Compile Include="Graze.cs" />
     <Compile Include="LightWound.cs" />

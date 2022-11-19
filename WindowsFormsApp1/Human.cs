@@ -12,11 +12,6 @@ namespace WindowsFormsApp1
         public string profession;
         public string professionTrait;
 
-        public bool alive { get; set; }
-        public int[,] coordinatesPostion { get; set; }
-        public Stats stats { get; set; }
-        public int currentHealth { get; set; }
-        public int maxHealth { get; } = 27;
 
         public Human(string background, string backgroundTrait, string profession, string professionTrait, bool alive, string name, Stats stats, Abilities abilities, int currentHealth)
         {
@@ -30,8 +25,7 @@ namespace WindowsFormsApp1
             this.stats = stats;
             this.abilities = abilities;
             this.currentHealth = currentHealth;
+            this.maxHealth = 27;
         }
-
-
     }
 }

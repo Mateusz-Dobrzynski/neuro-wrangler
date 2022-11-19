@@ -27,6 +27,7 @@ namespace WindowsFormsApp1
         /// </summary>
         /// <param name="slide">
         /// Defines by how many levels the difficulty should be increased.
+        /// The higher the slide, the more difficult the test becomes.
         /// Negative value of the parameter indicates reduced difficulty.
         /// </param>
         /// <returns>

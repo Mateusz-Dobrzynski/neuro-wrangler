@@ -8,14 +8,25 @@ namespace WindowsFormsApp1
 {
     public class Creature : INeuroObject
     {
-        bool alive { get; set; } = true;
-        int[,] coordinatesPostion { get; set; }
-        int currentHealth { get; set; }
-        int maxHealth { get; set; }
+        public bool alive { get; set; } = true;
+        public int[,] coordinatesPostion { get; set; }
+        public int currentHealth { get; set; }
+        public int maxHealth { get; set; }
         public string name { get; set; }
-        Stats stats { get; set; }
+        public Stats stats { get; set; }
         public Abilities abilities;
-        List<IWound> wounds { get; set; }
+        public List<IWound> wounds { get; set; } = new List<IWound>();
+
+        /*
+        public Creature(string name, Stats stats, Abilities abilities, int maxHealth)
+        {
+            this.name = name;
+            this.stats = stats;
+            this.abilities = abilities;
+            this.maxHealth = maxHealth;
+            this.currentHealth = maxHealth;
+        }
+        */
 
         void Attack()
         {
@@ -30,7 +41,7 @@ namespace WindowsFormsApp1
         /// It reduces current health and checks whether the creature is still alive
         /// Then, it performs Pain Resistance check and adds penalty accordingly
         /// </summary>
-        void Damage(IWound wound, Weapon weapon)
+        public void Damage(IWound wound, Weapon weapon)
         {
             //TO-DO: Damage reduction
             this.wounds.Add(wound);
@@ -52,7 +63,37 @@ namespace WindowsFormsApp1
         /// </summary>
         public void Heal(int healingPercentage)
         {
-
+            IWound woundCheck()
+            {   
+                int maxPenaltyValue = 0;
+                int maxPenaltyIndex = 0;
+                for (int i = 0; i < this.wounds.Count; i++)
+                {
+                    if (wounds[i].penalty > maxPenaltyValue)
+                    {
+                        maxPenaltyValue = wounds[i].penalty;
+                        maxPenaltyIndex = i;
+                    }
+                }
+                IWound biggestWound = this.wounds[maxPenaltyIndex];
+                return biggestWound;
+            }
+            if (this.wounds.Count == 0) return;
+            while(healingPercentage > 0)
+            {
+                IWound biggestWound = woundCheck();
+                if (healingPercentage >= biggestWound.penalty)
+                {
+                    healingPercentage -= biggestWound.penalty;
+                    this.currentHealth += biggestWound.damagePoints;
+                    this.wounds.Remove(biggestWound);
+                }
+                else
+                {
+                    biggestWound.penalty -= healingPercentage;
+                    healingPercentage = 0;
+                }
+            }
         }
     }
 }
