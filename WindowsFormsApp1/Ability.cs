@@ -12,9 +12,6 @@ namespace WindowsFormsApp1
         /// Stat related to given ability
         /// </summary>
 
-        public new int modifierInt { get; set; } = 0;
-        public new int modifierPercentage { get; set; } = 0;
-        public new int value { get; set; } = 0;
 
         /// <summary>
         /// Ability check is used to determine, whether a creature succeded or failed
@@ -81,7 +78,7 @@ namespace WindowsFormsApp1
             else return false;
         }
 
-        public new bool Contest(Ability ability, Stat baseStat, Ability opponentAbility, Stat opponentBaseStat)
+        public bool Contest(Ability ability, Stat baseStat, Ability opponentAbility, Stat opponentBaseStat)
         {
             while (true)
             {

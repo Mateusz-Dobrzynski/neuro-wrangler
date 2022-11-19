@@ -77,7 +77,11 @@ namespace WindowsFormsApp1
         /// </summary>
         public int CalculateDifficulty()
         {
-            throw new NotImplementedException();
+            int difficulty;
+            DifficultyCalculator difficultyCalculator = new DifficultyCalculator();
+            difficulty = difficultyCalculator.ModifierPercentageConversion(this.modifierPercentage);
+            difficulty += this.modifierInt;
+            return difficulty;
         }
 
         /// <summary>

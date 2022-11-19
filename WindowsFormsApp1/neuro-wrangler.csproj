@@ -2,6 +2,7 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
+    <LangVersion>10.0</LangVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DA800BA8-0A09-44DE-B180-56590002ED34}</ProjectGuid>
@@ -51,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Abilities.cs" />
     <Compile Include="Ability.cs" />
+    <Compile Include="AbilityTest.cs" />
     <Compile Include="Armor.cs" />
     <Compile Include="CharismaBasedAbility.cs" />
     <Compile Include="ConstitutionBasedAbility.cs" />

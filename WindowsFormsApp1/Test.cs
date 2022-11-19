@@ -19,6 +19,8 @@ namespace WindowsFormsApp1
             test.abilities.pistols.modifierInt -= 2;
             bool pistolsCheck = test.abilities.pistols.Check(test.stats.dexterity);
             int openPistolsCheck = test.abilities.pistols.OpenCheck(test.stats.dexterity);
+            AbilityTest abilityTest = new AbilityTest();
+            abilityTest.TestAbility();
             //SerializerTest serializerTest = new SerializerTest();
             //serializerTest.TestSerializer();
         }
