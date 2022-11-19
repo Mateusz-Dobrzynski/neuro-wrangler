@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace WindowsFormsApp1
 {
@@ -18,28 +19,22 @@ namespace WindowsFormsApp1
         /// This method allows to save objects as JSON files
         /// </summary>
         /// <param name="objectToSave">Object to be saved</param>
-        /// <param name="path">Directory in which object will be saved</param>
-        public void Save(INeuroObject objectToSave, string path)
+        /// <param name="directory">Directory in which object will be saved</param>
+        public void Save(INeuroObject objectToSave, string directory)
         {
             string fileContent = JsonConvert.SerializeObject(objectToSave);
-            File.WriteAllText($"{path}/{objectToSave.name}.json", fileContent);
+            File.WriteAllText($"{directory}/{objectToSave.name}.json", fileContent);
         }
 
         /// <summary>
         /// Allows to load JSON file and deserialize it
         /// </summary>
-        /// <param name="path"></param>
-        public void Load(string path)
+        /// <param name="path">Full path of a file to be loaded</param>
+        public Human Load(string path)
         {
-            throw new NotImplementedException();
-            FileStream fs = File.OpenRead(path);
-            byte[] bytes = Encoding.UTF8.GetBytes(path);
-            List<string> lines = new List<string>();
-            UTF8Encoding temp = new UTF8Encoding(true);
-            int readLenght;
-            while ((readLenght = fs.Read(bytes, 0, bytes.Length)) > 0) {
-                lines.Add(temp.GetString(bytes, 0, bytes.Length));
-            }
+            string file = File.ReadAllText(path);
+            Human human = JsonConvert.DeserializeObject<Human>(file);
+            return human;
         }
     }
 }

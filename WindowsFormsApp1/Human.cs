@@ -32,19 +32,6 @@ namespace WindowsFormsApp1
             this.currentHealth = currentHealth;
         }
 
-        public void Attack()
-        {
-            throw new NotImplementedException();
-        }
 
-        public void Damage()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Heal()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

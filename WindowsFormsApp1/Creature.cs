@@ -25,7 +25,6 @@ namespace WindowsFormsApp1
 
         /// <summary>
         /// TO-DO:
-        ///   - Implement ability checks
         ///   - Implement armor damage reduction
         /// Basic method used to deal damage to creatures.
         /// It reduces current health and checks whether the creature is still alive

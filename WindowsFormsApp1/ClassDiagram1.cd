@@ -9,7 +9,7 @@
   <Class Name="WindowsFormsApp1.Ability">
     <Position X="9" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAABgAAgAEAAAAAAQAAAAAAAAAACAAAAAAAAACAAA=</HashCode>
+      <HashCode>AAAAAAgAAgAAAAAAAAQAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
       <FileName>Ability.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -32,7 +32,7 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAACYACAAAAiAAAAAAgAABIAEAAAAAAAAAAAAIAA=</HashCode>
+      <HashCode>AAAAAAAYACAAAAgAAAAAAgAABAAEAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Human.cs</FileName>
     </TypeIdentifier>
   </Class>

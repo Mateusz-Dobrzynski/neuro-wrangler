@@ -21,8 +21,8 @@ namespace WindowsFormsApp1
             int openPistolsCheck = test.abilities.pistols.OpenCheck(test.stats.dexterity);
             AbilityTest abilityTest = new AbilityTest();
             abilityTest.TestAbility();
-            //SerializerTest serializerTest = new SerializerTest();
-            //serializerTest.TestSerializer();
+           SerializerTest serializerTest = new SerializerTest();
+           serializerTest.TestSerializer();
         }
     }
 }
