@@ -13,20 +13,10 @@ namespace WindowsFormsApp1
         public int currentHealth { get; set; }
         public int maxHealth { get; set; }
         public string name { get; set; }
-        public Stats stats { get; set; }
-        public Abilities abilities;
+        public Stats stats { get; set; } = new Stats(10, 10, 10, 10, 10);
+        public Abilities abilities { get; set; } = new Abilities();
         public List<IWound> wounds { get; set; } = new List<IWound>();
 
-        /*
-        public Creature(string name, Stats stats, Abilities abilities, int maxHealth)
-        {
-            this.name = name;
-            this.stats = stats;
-            this.abilities = abilities;
-            this.maxHealth = maxHealth;
-            this.currentHealth = maxHealth;
-        }
-        */
 
         void Attack()
         {
@@ -44,10 +34,17 @@ namespace WindowsFormsApp1
         public void Damage(IWound wound, Weapon weapon)
         {
             //TO-DO: Damage reduction
+            //Creature performs a pain resistance check. If it fails, penalty gets doubled.
+            //This does not apply to critical wounds as they always come with penalty of 160
+            if (wound.GetType() != typeof(CriticalWound)) {
+                if (!this.abilities.painResistance.Check(wound.painResistanceTestDifficulty)) wound.penalty *= 2;
+            }
+            //Wound is assigned to a creature and penalty is applied
             this.wounds.Add(wound);
             this.stats.ApplyModifierPercentage(wound.penalty);
             this.currentHealth -= wound.damagePoints;
-            if (this.currentHealth < 0)
+            //If creature's current health drops to 0, it gets killed
+            if (this.currentHealth <= 0)
             {
                 this.alive = false;
                 this.currentHealth = 0;
@@ -82,12 +79,15 @@ namespace WindowsFormsApp1
             while(healingPercentage > 0)
             {
                 IWound biggestWound = woundCheck();
+                //Wound gets removed
                 if (healingPercentage >= biggestWound.penalty)
                 {
                     healingPercentage -= biggestWound.penalty;
                     this.currentHealth += biggestWound.damagePoints;
                     this.wounds.Remove(biggestWound);
+                    this.stats.ApplyModifierPercentage(-biggestWound.penalty);
                 }
+                //Wound's penalty gets reduced
                 else
                 {
                     biggestWound.penalty -= healingPercentage;

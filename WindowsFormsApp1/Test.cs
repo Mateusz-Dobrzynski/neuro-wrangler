@@ -28,7 +28,8 @@ namespace WindowsFormsApp1
             test.Damage(graze, new Weapon());
             test.Damage(s, new Weapon());
             test.Damage(l, new Weapon());
-            test.Heal(45);
+            CreatureTest creatureTest = new CreatureTest();
+            creatureTest.TestCreature();
 
            SerializerTest serializerTest = new SerializerTest();
            serializerTest.TestSerializer();
