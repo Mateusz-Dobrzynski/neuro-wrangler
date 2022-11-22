@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         public Stats stats { get; set; } = new Stats(10, 10, 10, 10, 10);
         public Abilities abilities { get; set; } = new Abilities();
         public List<IWound> wounds { get; set; } = new List<IWound>();
-
+        public Armor? armor { get; set; } = null; // *
 
         void Attack()
         {
@@ -39,15 +39,19 @@ namespace WindowsFormsApp1
             if (wound.GetType() != typeof(CriticalWound)) {
                 if (!this.abilities.painResistance.Check(wound.painResistanceTestDifficulty)) wound.penalty *= 2;
             }
+            //Armor penetration is calculated
+            if(this.armor != null)
+            {
+                wound = armor.reduceDamage(wound, weapon);
+            }
             //Wound is assigned to a creature and penalty is applied
             this.wounds.Add(wound);
             this.stats.ApplyModifierPercentage(wound.penalty);
             this.currentHealth -= wound.damagePoints;
             //If creature's current health drops to 0, it gets killed
-            if (this.currentHealth <= 0)
+            if (this.currentHealth <= -27)
             {
                 this.alive = false;
-                this.currentHealth = 0;
             }
         }
 
@@ -75,7 +79,7 @@ namespace WindowsFormsApp1
                 IWound biggestWound = this.wounds[maxPenaltyIndex];
                 return biggestWound;
             }
-            if (this.wounds.Count == 0) return;
+            if (this.wounds.Count == 0 || this.currentHealth <= -27) return;
             while(healingPercentage > 0 && this.wounds.Count > 0)
             {
                 IWound biggestWound = woundCheck();

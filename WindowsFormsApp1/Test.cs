@@ -9,7 +9,7 @@ namespace WindowsFormsApp1
 {
     public class Test
     {
-        static void Main(string[] args)
+        [STAThread] static void Main(string[] args)
         {
 
             Abilities testAbilities = new Abilities();

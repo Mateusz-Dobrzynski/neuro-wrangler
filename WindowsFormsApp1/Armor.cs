@@ -13,19 +13,19 @@ namespace WindowsFormsApp1
         /// <summary>
         /// How much the damage will be reduced
         /// </summary>
-        int damageReduction { get; set; }
+        public int damageReduction { get; set; }
         /// <summary>
         /// Location which the armor protects
         /// </summary>
-        string location { get; set; }
+        public string location { get; set; }
         /// <summary>
         /// Penalty to Dexterity checks for wearing the armor
         /// </summary>
-        int penalty { get; set; }
+        public int penalty { get; set; }
         /// <summary>
         /// Defines how durable the armor is. If its durability gets reduced to 0, armor shatters and no longer reduces damage
         /// </summary>
-        int durability { get; set; }
+        public int durability { get; set; }
 
         /// <summary>
         /// Allows to reduce damage taken by a creature.
@@ -39,7 +39,6 @@ namespace WindowsFormsApp1
             double damageReduction = this.damageReduction;
             damageReduction -= weapon.armorPenetration;
             double damagePoints = wound.damagePoints;
-            //TO-DO: Serious and critical wounds reduce durability (by 1 and 3 respectively), but only when damage is made by a melee weapon.
             if (weapon.GetType() == typeof(MeleeWeapon))
             {
                 if (wound.damagePoints == 9) this.durability -= 1;
@@ -55,14 +54,14 @@ namespace WindowsFormsApp1
             {
                 return null;
             }
-            double reducedDamage = Math.Pow(damagePoints, 1 / (damageReduction + 1));
-            switch (reducedDamage)
+            double reducedWoundTier = woundTier - damageReduction;
+            switch (reducedWoundTier)
             {
-                case 1: return new Graze();
-                case 3: return new LightWound();
-                case 9: return new SeriousWound();
-                case 27: return new CriticalWound();
-                default: throw new Exception("Damage reduction erro");
+                case 0: return new Graze();
+                case 1: return new LightWound();
+                case 2: return new SeriousWound();
+                case 3: return new CriticalWound();
+                default: throw new Exception("Damage reduction error");
             }
         }
     }

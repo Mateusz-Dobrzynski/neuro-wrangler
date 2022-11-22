@@ -11,7 +11,7 @@ namespace WindowsFormsApp1
         public void TestCreature()
         {
             Creature testCreature = new Creature();
-            testCreature.maxHealth = testCreature.currentHealth = 10;
+            testCreature.maxHealth = testCreature.currentHealth = 27;
 
             //Every type of wound can be dealt and healed
             damageAndHealTest(testCreature);
@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
         {
             //Wound is dealt
             creature.Damage(new SeriousWound(), new Weapon());
-            Debug.Assert(creature.currentHealth == 1);
+            Debug.Assert(creature.currentHealth == 18);
             Debug.Assert(creature.wounds.Count == 1);
             Debug.Assert(creature.wounds[0].penalty == 30 || creature.wounds[0].penalty == 60);
             creature.Heal(60);
@@ -43,6 +43,21 @@ namespace WindowsFormsApp1
             creature.Heal(160);
             Debug.Assert(creature.currentHealth == 27);
             Debug.Assert(creature.alive == true);
+
+            //Creature can wear armor
+            creature.armor = new Armor();
+            creature.armor.damageReduction = 2;
+            creature.armor.durability = 10;
+
+            //Armor reduces damage from wounds
+            Weapon weapon = new Weapon();
+            weapon.armorPenetration = 1;
+            creature.Damage(new CriticalWound(), weapon);
+            Debug.Assert(creature.currentHealth == 18);
+
+            //Healing value can surpass creature's penalties
+            creature.Heal(100);
+            creature.armor = null;
 
             //Two critical wounds kill a creature outright
             creature.Damage(new CriticalWound(), new Weapon());
