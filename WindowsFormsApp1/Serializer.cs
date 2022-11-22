@@ -30,11 +30,10 @@ namespace WindowsFormsApp1
         /// Allows to load JSON file and deserialize it
         /// </summary>
         /// <param name="path">Full path of a file to be loaded</param>
-        public Human Load(string path)
+        public T Load<T>(string path)
         {
-            string file = File.ReadAllText(path);
-            Human human = JsonConvert.DeserializeObject<Human>(file);
-            return human;
+            T deserializedObject = JsonConvert.DeserializeObject<T>(File.ReadAllText(path));
+            return deserializedObject;
         }
     }
 }

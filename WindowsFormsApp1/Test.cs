@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
@@ -10,6 +11,7 @@ namespace WindowsFormsApp1
     {
         static void Main(string[] args)
         {
+
             Abilities testAbilities = new Abilities();
             testAbilities.pistols.value = 1;
             Human test = new Human("", "", "", "", true, "Test Human", new Stats(15, 15, 15, 15, 15), testAbilities, 27);
@@ -28,11 +30,16 @@ namespace WindowsFormsApp1
             test.Damage(graze, new Weapon());
             test.Damage(s, new Weapon());
             test.Damage(l, new Weapon());
+
             CreatureTest creatureTest = new CreatureTest();
             creatureTest.TestCreature();
 
            SerializerTest serializerTest = new SerializerTest();
-           serializerTest.TestSerializer();
+           //serializerTest.TestSerializer();
+
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
         }
     }
 }

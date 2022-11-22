@@ -76,7 +76,7 @@ namespace WindowsFormsApp1
                 return biggestWound;
             }
             if (this.wounds.Count == 0) return;
-            while(healingPercentage > 0)
+            while(healingPercentage > 0 && this.wounds.Count > 0)
             {
                 IWound biggestWound = woundCheck();
                 //Wound gets removed

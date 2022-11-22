@@ -34,10 +34,26 @@ namespace WindowsFormsApp1
             Debug.Assert(creature.stats.intelligence.modifierPercentage == 0);
             Debug.Assert(creature.stats.perception.modifierPercentage == 0);
 
-            //Wound kills a creature
+            //Critical wound puts creature into an agonal state
             creature.Damage(new CriticalWound(), new Weapon());
-            Debug.Assert(creature.alive == false);
+            Debug.Assert(creature.alive == true);
             Debug.Assert(creature.currentHealth == 0);
+
+            //Critical wound can be healed
+            creature.Heal(160);
+            Debug.Assert(creature.currentHealth == 27);
+            Debug.Assert(creature.alive == true);
+
+            //Two critical wounds kill a creature outright
+            creature.Damage(new CriticalWound(), new Weapon());
+            creature.Damage(new CriticalWound(), new Weapon());
+            Debug.Assert(creature.currentHealth == -27);
+            Debug.Assert(creature.alive == false);
+
+            //Dead creature cannot be healed
+            creature.Heal(160);
+            Debug.Assert(creature.currentHealth == -27);
+            Debug.Assert(creature.alive == false);
 
         }
     }

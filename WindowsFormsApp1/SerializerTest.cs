@@ -10,22 +10,29 @@ namespace WindowsFormsApp1
     {
        public void TestSerializer()
         {
-            //TestSaving();
-            TestLoading();
-        }
+            string path = @"C:\Users\gryzo\Desktop\neuro-files\";
+            Serializer s = new Serializer();
 
-        private void TestSaving()
-        {
+            //Saves and loads creatures
+            Creature creature1 = new Creature();
+            creature1.name = "Test Creature 1";
+            //s.Save(creature1, path);
+            Creature loadedCreature1 = s.Load<Creature>($"{path}Test Creature 1.json");
+
+             //Saves and loads humans
             Abilities woodsAbilities = new Abilities();
             woodsAbilities.rifles.value = 4;
             Human woods = new Human("", "", "", "", true, "Jackson Woods", new Stats(10, 10, 10, 10, 10), woodsAbilities, 27);
-            Serializer s = new Serializer();
-            s.Save(woods, @"C:\Users\gryzo\Desktop\neuro-files");
-        }
-        private void TestLoading()
-        {
-            Serializer s = new Serializer();
-            Human loadedWoods = s.Load(@"C:\Users\gryzo\Desktop\neuro-files\Jackson Woods.json");
-        }
+            //s.Save(woods, path);
+            Human loadedWoods = s.Load<Human>($"{path}Jackson Woods.json");
+
+            //Saves and loads weapons
+            Firearm ak = new Firearm();
+            ak.throwable = false;
+            ak.armorPenetration = 2;
+            ak.name = "AK-47";
+            //s.Save(ak, path);
+            Firearm loadedAk = s.Load<Firearm>($"{path}AK-47.json");
+       }
     }
 }

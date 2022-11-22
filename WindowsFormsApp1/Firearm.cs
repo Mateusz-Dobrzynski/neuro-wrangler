@@ -10,23 +10,23 @@ namespace WindowsFormsApp1
         /// <summary>
         /// Firearm type which determines distance penalty
         /// </summary>
-        private string firearmType;
+        public string firearmType;
         /// <summary>
         /// Value of damage dealt
         /// </summary>
-        int damage;
+        public IWound damage;
         /// <summary>
         /// Minimal time in segments it takes to take a shot
         /// </summary>
-        private int shootingTime;
+        public int shootingTime;
         /// <summary>
         /// Time in segments it takes for the weapon to reload
         /// </summary>
-        private int reloadTime;
+        public int reloadTime;
         /// <summary>
         /// If true, firearm has to be reloaded after every shot
         /// </summary>
-        private bool repeating;
+        public bool repeating;
        /// <summary>
         /// If true, burst shooting is possible with this weapon.
         /// </summary>
